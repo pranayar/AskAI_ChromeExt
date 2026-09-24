@@ -1,0 +1,263 @@
+#askai-box {
+
+    position: fixed;
+
+    width: 400px;
+
+    max-width: calc(100vw - 32px);
+
+    max-height: 420px;
+
+    background: #ffffff;
+
+    color: #1f1f1f;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.14),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+
+    z-index: 2147483647;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    animation:
+        askai-appear 0.15s ease-out;
+}
+
+
+/*
+    Small pointer connecting the popup
+    to the selected text.
+*/
+#askai-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+
+    left: 50%;
+
+    width: 13px;
+
+    height: 13px;
+
+    background: #ffffff;
+
+    border-left: 1px solid #e2e2e2;
+
+    border-top: 1px solid #e2e2e2;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+}
+
+
+/* Header */
+
+.askai-header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        11px
+        13px;
+
+    border-bottom:
+        1px solid #eeeeee;
+
+    background: #ffffff;
+
+}
+
+
+/* Title */
+
+.askai-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #222222;
+
+}
+
+
+.askai-icon {
+
+    font-size: 15px;
+
+}
+
+
+/* Close button */
+
+#askai-close {
+
+    border: none;
+
+    background: transparent;
+
+    color: #777777;
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    width: 27px;
+
+    height: 27px;
+
+    padding: 0;
+
+    border-radius: 6px;
+
+}
+
+
+#askai-close:hover {
+
+    background: #f2f2f2;
+
+    color: #333333;
+
+}
+
+
+/* Body */
+
+.askai-body {
+
+    padding: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+
+}
+
+
+/* Response */
+
+.askai-response {
+
+    color: #242424;
+
+}
+
+
+/* Loading */
+
+.askai-loading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #666666;
+
+}
+
+
+/* Spinner */
+
+.askai-spinner {
+
+    width: 15px;
+
+    height: 15px;
+
+    border:
+        2px solid #e2e2e2;
+
+    border-top-color: #555555;
+
+    border-radius: 50%;
+
+    animation:
+        askai-spin
+        0.7s
+        linear
+        infinite;
+
+}
+
+
+/* Animations */
+
+@keyframes askai-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes askai-appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-4px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}

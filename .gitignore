@@ -1,0 +1,49 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editors
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Build / coverage
+dist/
+build/
+coverage/
+
+# Local AI models
+*.gguf
+*.ggml
+*.bin
+models/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local development
+*.local
