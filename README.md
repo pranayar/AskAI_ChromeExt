@@ -3,9 +3,9 @@
 A lightweight Chrome extension that lets you highlight text on any webpage, right-click **AskAI**, and get an AI-generated response directly on the page.
 
 AskAI runs completely locally using a **Qwen GGUF model** through a Node.js backend. No OpenAI API key or cloud AI service is required.
-
-![AskAI Demo](Demo.gif)
-
+<p align="center">
+  <img src="Demo.gif" alt="AskAI Demo" width="1080">
+</p>
 ---
 
 ## ✨ Features
